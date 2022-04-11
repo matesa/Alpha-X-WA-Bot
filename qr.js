@@ -3,12 +3,12 @@ const {WAConnection, MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Axios = require('axios')
 
-const msgs = '*🚀 Alpha-X , is a WhatsApp helper bot written by [Yusuf Usta] and edited by 🙂 (SL-Alpha-X-Team.) Does not log into your account 🔎 It is written on WhatsApp Web API. 🔏* \n\n More details below 👇'
-const msg1 = '```Alpha-X Bot - Alpha Userbot is Open Source software open to development. \nThe user is responsible for all consequences that may arise from incorrect or misuse. \nSince it is an open source project, anyone can copy the software, add and remove,\nand use it in a way that they customize. In addition, plug-in support enables users to \ninstall their own plugins to the original software and use them as they wish.\nUsing the bot out of purpose will explicitly ban you.\nUsage is entirely the user\'s responsibility, Alpha Userbot is an \ninfrastructure only. Just as the operating system is not responsible \nfor the work done with the programs that are installed later, Alpha-X \nis not responsible for the usage purpose and method of the users.\nMarketing Alpha-X for money, making it available or having any material value\nıt is strictly forbidden to offer it for sale with anything. All legal investigations that may arise\nthe user is responsible.```'
-const warn = '```Due to Userbot ; Your WhatsApp account may be banned. \nThis is an open source project, you are responsible for everything you do. \nAbsolutely, Alpha-X executives do not accept responsibility.\nBy establishing the Alpha-X , you are deemed to have accepted these responsibilities.```'
-const msg2 = '```This project is open source so all the codes are clear. Neither less no more ; you can look what you want. We absolutely do not have access to your accounts.```'
-const msg3 = '```If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on Whatsapp> Three Dots> Whatsapp Web> Logout from all sessions button.```'
-const msg4 = '```Of course not. It will never happen. But you can donate to us. You can reach me via Telegram .```'
+const msgs = '*🚀 MatesaWhatsapp , Hesabınıza giriş yapmaz 🔎 WhatsApp Web API üzerinde yazılmıştır. 🔏* \n\n Daha fazla ayrıntı aşağıda 👇'
+const msg1 = '```MatesaWhatsapp - MatesaWhatsapp geliştirmeye Açık Kaynak kodlu bir yazılımdır. \nYanlış veya yanlış kullanımdan doğabilecek tüm sonuçlardan kullanıcı sorumludur. \nAçık kaynaklı bir proje olduğu için, herkes yazılımı kopyalayabilir, ekleyebilir ve kaldırabilir,\nve onu kişiselleştirdiği şekilde kullanabilir. Ek olarak, eklenti desteği, kullanıcıların \norijinal yazılıma kendi eklentilerini yüklemelerini ve bunları diledikleri gibi kullanmalarını sağlar.\nBot'u amaç dışı kullanmak sizi açıkça yasaklar.\nKullanım tamamen kullanıcının sorumluluğundadır\'s responsibility altyapıdır Nasıl ki işletim sistemi \nsonradan yüklenen programlarla yapılan işten sorumlu değilse, MatesaBot\kullanıcıların kullanım amacı ve yönteminden \nsorumlu değildir \nMatesaWhatsapp para karşılığı pazarlamak, bulundurulması veya herhangi bir maddi değeri bulunan.\nherhangi bir şeyle birlikte satışa sunulması kesinlikle yasaktır\nDoğabilecek tüm hukuki soruşturmalardan\nKullanıcı sorumludur.```'
+const warn = '```Userbot nedeniyle; WhatsApp hesabınız yasaklanmış olabilir. \nBu bir açık kaynak projesidir, yaptığınız her şeyden siz sorumlusunuz. \nMatesaWhatsapp yöneticileri kesinlikle sorumluluk kabul etmezler.\nMatesaWhatsapp kurarak bu sorumlulukları kabul etmiş olursunuz.```'
+const msg2 = '```Bu proje açık kaynak olduğundan tüm kodlar açıktır. Ne az ne fazla; istediğine bakabilirsin Hesaplarınıza kesinlikle erişimimiz yok.```'
+const msg3 = '```Güvenlik konusunda endişeleriniz varsa, kendi bilgisayarınıza yükleyebilirsiniz. Başka birinin verilerinizi ele geçirdiğini düşünüyorsanız, Whatsapp> Üç Nokta> Whatsapp Web> Tüm oturumlardan çıkış düğmesine tıklamanız yeterlidir.```'
+const msg4 = '```Elbette hayır. Asla olmayacak. Ama bize bağışta bulunabilirsiniz. Bana Telegram'dan ulaşabilirsiniz .```'
 
 async function AlphaX () {
     const conn = new WAConnection();
@@ -16,28 +16,28 @@ async function AlphaX () {
     conn.logger.level = 'warn'; 
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.blueBright.bold('<>======== ❇ Alpha-X ❇  ')}${chalk.red.bold('BOT QR CODE ========<>')}
-${chalk.white.bold('[[ New and speed version of Alpha-X-Bot-QR Code ]]')}
+        console.log(`${chalk.blueBright.bold('<>======== ❇ MatesaWhatsapp ❇  ')}${chalk.red.bold('BOT QR CODE ========<>')}
+${chalk.white.bold('[[ MatesaWhatsapp QR Kodunun yeni ve hızlı versiyonu ]]')}
 
-${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
+${chalk.green.bold('⚙ Whatsapp'a bağlanılıyor Lütfen bekleyin...💹')}`);
     });
     
 // 'AlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')
 
     conn.on('open', async () => {
         
-        console.log(chalk.blueBright.bold("Creating your session..."))
+        console.log(chalk.blueBright.bold("Oturumunuzu oluşturuluyor..."))
 
         const rows = [
-         {title: '🔎 ʏᴏᴜʀ ǫʀ sᴇssɪᴏɴ', description: '\n\nAlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64') + '\n\n*⚠ Please Do Not Share This Code With Anyone!* ' + conn.user.name , rowId:"rowid1"},
+         {title: '🔎 ʏᴏᴜʀ ǫʀ sᴇssɪᴏɴ', description: '\n\nMATESA;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64') + '\n\n*⚠ Lütfen Bu Kodu Kimseyle Paylaşmayın!* ' + conn.user.name , rowId:"rowid1"},
          {title: '📚 ᴀʙᴏᴜᴛ ᴀʟᴘʜᴀ-x', description: `\n\n${msg1}`, rowId:"rowid2"},
          {title: '❌ ᴡᴀʀɴɪɴɢs ', description: `\n\n${warn}`, rowId:"rowid3"},
-         {title: '🤔 ᴄᴀɴ ʏᴏᴜ ʀᴇᴀᴅ ᴍʏ ᴍᴇssᴀɢᴇs ?', description: `Answer a few frequently asked questions\n\n${msg2}`, rowId:"rowid4"},
-         {title: '😐 ᴡʜᴀᴛ ᴀʙᴏᴜᴛ ᴏᴜʀ sᴇᴄᴜʀɪᴛʏ ?', description: `Answer a few frequently asked questions\n\n${msg3}`, rowId:"rowid5"},
-         {title: '🤕 ɪs ᴛʜɪs ᴘᴀɪᴅ ?', description: `Answer a few frequently asked questions\n\n${msg4}`, rowId:"rowid6"}
+         {title: '🤔 ᴄᴀɴ ʏᴏᴜ ʀᴇᴀᴅ ᴍʏ ᴍᴇssᴀɢᴇs ?', description: `Sık sorulan birkaç soruyu yanıtlayın\n\n${msg2}`, rowId:"rowid4"},
+         {title: '😐 ᴡʜᴀᴛ ᴀʙᴏᴜᴛ ᴏᴜʀ sᴇᴄᴜʀɪᴛʏ ?', description: `Sık sorulan birkaç soruyu yanıtlayın\n\n${msg3}`, rowId:"rowid5"},
+         {title: '🤕 ɪs ᴛʜɪs ᴘᴀɪᴅ ?', description: `Sık sorulan birkaç soruyu yanıtlayın\n\n${msg4}`, rowId:"rowid6"}
          ]
 
-        const sections = [{title: "⚔️ Alpha-X-Bot-QR-GEN v.2 🌏", rows: rows}]
+        const sections = [{title: "⚔️ MatesaWhatsapp QR v.2 🌏", rows: rows}]
 
        const button = {
         buttonText: 'ᴄʟɪᴄᴋ ʜᴇʀᴇ 💝',
@@ -48,19 +48,19 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
         
         await conn.sendMessage(conn.user.jid ,button, MessageType.listMessage)
         
-        var alpha = await Axios.get(`https://telegra.ph/file/6c87d3ff428088d9ad58f.jpg`, { responseType: 'arraybuffer' })
+        var alpha = await Axios.get(`https://i.hizliresim.com/2ajrlek.png`, { responseType: 'arraybuffer' })
         
-          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*' , thumbnail: Buffer.from(alpha.data)})
+          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 MatesaWhatsapp kullandığınız için teşekkürler *' , thumbnail: Buffer.from(alpha.data)})
 
         console.log(
-            chalk.red('__________________________ COPY THIS CODE _________________________ \n'), 
-            chalk.greenBright.bold('Alpha-X;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64'))
+            chalk.red('__________________________ BU KODU KOPYALAYIN _________________________ \n'), 
+            chalk.greenBright.bold('MATESA;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64'))
         );
 
         console.log(
-            chalk.whiteBright.bold('\n⚠  Please Do Not Share This Code With Anyone '),
+            chalk.whiteBright.bold('\n⚠ Lütfen Bu Kodu Kimseyle Paylaşmayın '),
             chalk.red( conn.user.name ),
-            chalk.blueBright.bold('\n\nif you can\'t copy the code, check your whatsapp number, its sent to your own number >>')
+            chalk.blueBright.bold('\n\nkodu kopyalayamıyorsanız whatsapp numaranızı kontrol edin, kendi numaranıza gönderilmiştir >>')
         );
        process.exit(0);
     });
@@ -68,4 +68,4 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
     await conn.connect();
 }
 
-AlphaX ()
+MatesaWhatsapp ()
